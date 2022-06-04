@@ -2,7 +2,7 @@
 
 module Mutations
   class BaseMutation < GraphQL::Schema::RelayClassicMutation
-    include ExecutionErrorResponder
+    include Graphql::ExecutionErrorResponder
     include GraphqlHelper
 
     argument_class Types::BaseArgument
