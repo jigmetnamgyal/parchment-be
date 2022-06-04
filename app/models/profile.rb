@@ -16,4 +16,5 @@ class Profile < ApplicationRecord
   validates :email_address, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   enum institution_type: { college: 0, school: 1 }
+  enum kyc_status: { in_progress: 0, approved: 1, rejected: 2 }
 end

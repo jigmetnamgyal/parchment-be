@@ -9,6 +9,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
       t.string :institution_name, null: false, default: ''
       t.string :email_address, null: false, default: ''
       t.integer :institution_type, null: false
+      t.integer :kyc_status, null: false, default: 0
       t.references :user, null: false, type: :integer
 
       t.timestamps
