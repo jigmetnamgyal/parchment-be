@@ -3,9 +3,9 @@
 class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
   # This allows for outside API access while preventing CSRF attacks,
-  # but you'll have to authenticate your user separately
+  # but you'll have to authenticate your users separately
   # protect_from_forgery with: :null_session
-  include Graphql::ExecutionErrorResponder
+  # include Graphql::ExecutionErrorResponder
 
   def execute
     variables = prepare_variables(params[:variables])
@@ -27,11 +27,15 @@ class GraphqlController < ApplicationController
     begin
       @decoded = GenerateJwtToken.decode(header)
       user = User.find_by(wallet_address: @decoded[:wallet_address])
-      user.jti == header ? execution_error(message: 'Not Authorized') : user
+      if user.jti == header
+        user
+      else
+        raise GraphQL::ExecutionError, 'Not Authorized'
+      end
     rescue ActiveRecord::RecordNotFound => e
-      execution_error(message: e.message)
+      raise GraphQL::ExecutionError, 'Not Authorized'
     rescue JWT::DecodeError => e
-      execution_error(message: e.message)
+      raise GraphQL::ExecutionError, 'Not Authorized'
     end
   end
 

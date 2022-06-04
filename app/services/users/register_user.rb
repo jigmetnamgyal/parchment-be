@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module User
-  class Register < BaseService
+module Users
+  class RegisterUser < BaseService
     def call
       User.create!(wallet_address: attributes(:wallet_address), jti: generate_token)
     end
