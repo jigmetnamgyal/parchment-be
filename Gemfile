@@ -16,6 +16,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'graphql', '~> 1.12.13'
 gem 'jwt'
 gem 'rack-cors'
+gem 'wicked_pdf'
 
 group :development, :test do
   gem 'pry'
