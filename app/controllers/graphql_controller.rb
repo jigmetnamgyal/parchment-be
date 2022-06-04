@@ -27,11 +27,15 @@ class GraphqlController < ApplicationController
     begin
       @decoded = GenerateJwtToken.decode(header)
       user = User.find_by(wallet_address: @decoded[:wallet_address])
-      user.jti == header ? user : execution_error(message: 'Not Authorized')
+      if user.jti == header
+        user
+      else
+        raise GraphQL::ExecutionError, 'Not Authorized'
+      end
     rescue ActiveRecord::RecordNotFound => e
-      execution_error(message: e.message)
+      raise GraphQL::ExecutionError, 'Not Authorized'
     rescue JWT::DecodeError => e
-      execution_error(message: e.message)
+      raise GraphQL::ExecutionError, 'Not Authorized'
     end
   end
 

@@ -15,7 +15,6 @@ module Mutations
     field :profile, Types::ProfileType, null: true
 
     def resolve(attributes:)
-      binding.pry
       current_user.create_profile(attributes)
     end
   end
