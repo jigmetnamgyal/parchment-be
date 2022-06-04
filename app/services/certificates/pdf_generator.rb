@@ -10,7 +10,7 @@ module Certificates
         filename: "certificate(#{Time.current.strftime('%d/%m/%Y %H:%M:%S')}).pdf",
         content_type: 'application/pdf'
       ).then do |attached|
-        attached && url_for(certificate_object.certificate_pdf_download)
+        attached && rails_blob_path(certificate_object.certificate_pdf_download, only_path: true)
       end
     end
 

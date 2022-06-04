@@ -4,9 +4,9 @@ module Certificates
   module Helpers
     def body_layout
       render_to_string(
-        'pdf/certificate.html.erb',
-        layout: 'project_pdf',
-        locals: { certificate: certificate.decorate }
+        'pdf/certificate',
+        layout: 'certificate_pdf',
+        locals: { certificate: certificate }
       )
     end
 

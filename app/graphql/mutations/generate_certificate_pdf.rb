@@ -2,7 +2,7 @@
 
 module Mutations
   class GenerateCertificatePdf < BaseMutation
-    argument :certificate_id, Types::CustomTypes::FileType, required: true
+    argument :certificate_id, ID, required: true
     field :url, String, null: true
 
     def resolve(certificate_id:)
