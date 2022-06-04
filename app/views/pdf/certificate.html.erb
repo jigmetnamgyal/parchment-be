@@ -1,0 +1,21 @@
+<div>
+  <div>
+    <%= image_tag(certificate.institution_logo_url) %>
+  </div>
+  <div>
+    <p><%= certificate.institution_name %></p>
+    <p><%= certificate.description %></p>
+    <p><%= certificate.major %></p>
+    <p>to</p>
+    <p><%= certificate.awarded_to %></p>
+    <p>who has satisfied the Examiners in the Final examinations for the degree with distinction </p>
+  </div>
+
+  <div>
+    <p><%= Date.current %></p>
+    <div>
+      <%= image_tag ('../../assets/sign.png'), class: "sign-image" %>
+      <p>Registrar and Secretary</p>
+    </div>
+  </div>
+</div>

@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_604_195_934) do
     t.index %w[blob_id variation_digest], name: 'index_active_storage_variant_records_uniqueness', unique: true
   end
 
-  create_table 'certificates', force: :cascade do |t|
+  create_table 'pdf', force: :cascade do |t|
     t.string 'institution_name'
     t.string 'major'
     t.string 'awarded_to'
