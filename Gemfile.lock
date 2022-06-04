@@ -192,6 +192,7 @@ GEM
     websocket-extensions (0.1.5)
     wicked_pdf (2.6.3)
       activesupport
+    wkhtmltopdf-binary (0.12.6.5)
     zeitwerk (2.5.4)
 
 PLATFORMS
@@ -212,6 +213,7 @@ DEPENDENCIES
   rubocop-rails
   tzinfo-data
   wicked_pdf
+  wkhtmltopdf-binary
 
 RUBY VERSION
    ruby 3.0.3p157
