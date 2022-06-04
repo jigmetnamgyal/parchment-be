@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'net/http'
 
 class LoginController < ApplicationController
   def login
@@ -19,6 +20,7 @@ class LoginController < ApplicationController
     uri = URI('https://cert-tainty.vercel.app/api/verify')
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
     request = Net::HTTP::Post.new(uri.path, { 'Content-Type' => 'application/json' })
     request.body = {
