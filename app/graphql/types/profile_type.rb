@@ -5,7 +5,7 @@ module Types
     field :id, ID, null: false
     field :first_name, String, null: false
     field :last_name, String, null: false
-    field :document_url, String, null: false
+    field :document_url, [String], null: false
     field :institution_name, String, null: false
     field :email_address, String, null: false
     field :institution_type, Types::InstitutionEnum, null: false
