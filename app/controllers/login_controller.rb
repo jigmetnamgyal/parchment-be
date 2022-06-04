@@ -31,6 +31,6 @@ class LoginController < ApplicationController
   end
 
   def login_params
-    params.require(:user).permit(:wallet_address, :signature, :message, :value)
+    params.require(:user).permit(:wallet_address, :signature, :message)
   end
 end
