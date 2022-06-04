@@ -8,7 +8,8 @@ module Types
     field :document_url, String, null: false
     field :institution_name, String, null: false
     field :email_address, String, null: false
-    field :institution_type, String, null: false
+    field :institution_type, Types::InstitutionEnum, null: false
+    field :kyc_status, Types::KycStatusEnum, null: false
     field :user, Types::UserType, null: false
   end
 end
