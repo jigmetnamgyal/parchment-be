@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Certificate
+module Certificates
   class Creator < BaseService
     attr_accessor :file
 
@@ -9,7 +9,7 @@ module Certificate
 
       Certificate.new(certificate_attributes(attributes)).tap do |certificate|
         certificate.institution_logo.attach(blob)
-        certificate.institution_logo_url = rails_blob_path(certificate.institution_logo)
+        certificate.institution_logo_url = rails_blob_path(certificate.institution_logo, only_path: true)
         certificate.save!
       end
     end
