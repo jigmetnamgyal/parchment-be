@@ -10,7 +10,7 @@ gem 'rails', '~> 7.0.3'
 # gem "bcrypt", "~> 3.1.7"
 gem 'bootsnap', require: false
 gem 'image_processing'
-gem 'interactor'
+gem 'apollo_upload_server', '2.0.5'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'graphql', '~> 1.12.13'
