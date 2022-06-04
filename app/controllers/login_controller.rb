@@ -22,10 +22,7 @@ class LoginController < ApplicationController
 
     request = Net::HTTP::Post.new(uri.path, { 'Content-Type' => 'application/json' })
     request.body = {
-      "nonce": {
-        "message": login_params['message'],
-        "value": login_params['value']
-      },
+      "message": login_params['message'],
       "signature": login_params['signature'],
       "wallet_address": login_params['wallet_address']
     }.to_json
