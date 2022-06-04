@@ -5,7 +5,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
     create_table :profiles do |t|
       t.string :first_name, null: false, default: ''
       t.string :last_name, null: false, default: ''
-      t.string :document_url, null: false, default: [], array: true
+      t.string :document_url, null: false, default: ''
       t.string :institution_name, null: false, default: ''
       t.string :email_address, null: false, default: ''
       t.integer :institution_type, null: false
@@ -14,7 +14,5 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-
-    add_index :profiles, :document_url, using: 'gin'
   end
 end
