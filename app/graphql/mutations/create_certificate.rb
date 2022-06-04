@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Mutations
-  class GenerateCertificate < BaseMutation
+  class CreateCertificate < BaseMutation
     class GenerateCertificateAttributes < Types::BaseInputObject
       argument :institution_logo, Types::CustomTypes::FileType, required: true
       argument :institution_name, String, required: true
@@ -11,10 +11,10 @@ module Mutations
     end
 
     argument :attributes, GenerateCertificateAttributes, required: true
-    type Types::ProfileType
+    type Types::CertificateType
 
     def resolve(attributes:)
-      current_user.create_profile(attributes.to_h)
+      Certificate::Creator.new(current_user: current_user, attributes: attributes.to_h).call
     end
   end
 end

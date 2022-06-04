@@ -3,6 +3,6 @@
 module Types
   class MutationType < Types::BaseObject
     field :send_for_kyc, mutation: Mutations::SendForKyc
-    field :generate_certificate, mutation: Mutations::GenerateCertificate
+    field :create_certificate, mutation: Mutations::CreateCertificate
   end
 end

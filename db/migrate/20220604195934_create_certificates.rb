@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCertificates < ActiveRecord::Migration[7.0]
   def change
     create_table :certificates do |t|
@@ -6,6 +8,7 @@ class CreateCertificates < ActiveRecord::Migration[7.0]
       t.string :awarded_to
       t.string :description
       t.string :institution_logo_url
+      t.references :user, null: false, type: :integer
 
       t.timestamps
     end
