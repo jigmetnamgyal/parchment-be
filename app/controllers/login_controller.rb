@@ -16,7 +16,7 @@ class LoginController < ApplicationController
   private
 
   def valid_wallet_address
-    uri = URI('https://team-hex.vercel.app/api/verify/signature')
+    uri = URI('https://cert-tainty.vercel.app/api/verify')
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
 
