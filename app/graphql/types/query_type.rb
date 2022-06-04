@@ -6,7 +6,7 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    field :profiles, resolver: Resolvers::ProfilesResolver, authenticate: true
-    field :profile, resolver: Resolvers::ProfileResolver, authenticate: true
+    field :profiles, resolver: Resolvers::ProfilesResolver
+    field :profile, resolver: Resolvers::ProfileResolver
   end
 end
