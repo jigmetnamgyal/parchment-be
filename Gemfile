@@ -8,8 +8,9 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'
 # gem "bcrypt", "~> 3.1.7"
+gem 'apollo_upload_server', '2.0.5'
 gem 'bootsnap', require: false
-gem 'interactor'
+gem 'image_processing'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'graphql', '~> 1.12.13'
