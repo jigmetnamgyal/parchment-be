@@ -12,7 +12,7 @@ module Mutations
     end
 
     argument :attributes, SendForKycAttributes, required: true
-    field :profile, Types::ProfileType, null: true
+    type Types::ProfileType
 
     def resolve(attributes:)
       current_user.create_profile(attributes.to_h)
