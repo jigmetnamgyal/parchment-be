@@ -9,6 +9,7 @@ gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'
 # gem "bcrypt", "~> 3.1.7"
 gem 'bootsnap', require: false
+gem 'image_processing'
 gem 'interactor'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
