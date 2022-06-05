@@ -6,5 +6,6 @@ module Types
     field :create_certificate, mutation: Mutations::CreateCertificate
     field :generate_certificate_pdf, mutation: Mutations::GenerateCertificatePdf
     field :update_kyc_status, mutation: Mutations::UpdateKycStatus
+    field :generate_certificate_with_qr, mutation: Mutations::GenerateCertificateWithQr
   end
 end

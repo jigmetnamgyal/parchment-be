@@ -17,5 +17,12 @@
       <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg") %>
       <p>Registrar and Secretary</p>
     </div>
+
+    <div>
+      <% if certificate.qr_code_url.present? %>
+        <%= image_tag(certificate.qr_code_url) %>
+        <p>Scan to view your NFT certificate</p>
+      <% end %>
+    </div>
   </div>
 </div>
