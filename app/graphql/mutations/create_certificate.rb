@@ -3,7 +3,7 @@
 module Mutations
   class CreateCertificate < BaseMutation
     class GenerateCertificateAttributes < Types::BaseInputObject
-      argument :institution_logo, Types::CustomTypes::FileType, required: true
+      argument :institution_logo_url, String, required: true
       argument :institution_name, String, required: true
       argument :major, String, required: true
       argument :awarded_to, String, required: true
