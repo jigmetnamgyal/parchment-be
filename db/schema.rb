@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_604_195_934) do
+ActiveRecord::Schema[7.0].define(version: 20_220_605_092_251) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -54,6 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_604_195_934) do
     t.integer 'user_id', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
+    t.datetime 'year_awarded'
     t.index ['user_id'], name: 'index_certificates_on_user_id'
   end
 
