@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= wicked_pdf_stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "pdf" %>
 </head>
 
-<body id="pdf-template"><%= yield %></body>
+<body
+  id="placeholder"
+  style="
+  background-image: url('https://www.pngitem.com/pimgs/m/61-612505_transparent-background-page-borders-png-png-download.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -45px;
+  height: 1172px;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  "
+>
+  <%= yield %>
+</body>
 
 </html>

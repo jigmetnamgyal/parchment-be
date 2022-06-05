@@ -1,9 +1,9 @@
-<div>
+<div >
   <div>
-    <%= image_tag(certificate.institution_logo_url) %>
+    <%= image_tag(certificate.institution_logo_url, style: "height: 300px; width: 300px; margin-left: 300px; margin-top: 50px") %>
   </div>
-  <div>
-    <p><%= certificate.institution_name %></p>
+  <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <p style="font-family: Sans-Serif; font-weight: bold; font-size: 50px"><%= certificate.institution_name %></p>
     <p><%= certificate.description %></p>
     <p><%= certificate.major %></p>
     <p>to</p>
@@ -12,9 +12,9 @@
   </div>
 
   <div>
-    <p><%= Date.current %></p>
     <div>
-      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg") %>
+      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg", style: "height: 100px; width: 100px") %>
+      <p><%= Date.current %></p>
       <p>Registrar and Secretary</p>
     </div>
   </div>
