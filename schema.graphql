@@ -90,14 +90,17 @@ type Mutation {
 }
 
 type Profile {
+  approvedCount: Int!
   documentUrl: [String!]!
   emailAddress: String!
   firstName: String!
   id: ID!
+  inProgressCount: Int!
   institutionName: String!
   institutionType: InstitutionEnum!
   kycStatus: KycStatusEnum!
   lastName: String!
+  rejectedCount: Int!
   user: User!
 }
 
