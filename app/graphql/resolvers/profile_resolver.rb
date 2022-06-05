@@ -2,10 +2,11 @@
 
 module Resolvers
   class ProfileResolver < BaseResolver
+    argument :id, ID, required: true
     type Types::ProfileType, null: true
 
-    def resolve
-      current_user.profile
+    def resolve(id:)
+      Profile.find(id)
     end
   end
 end
