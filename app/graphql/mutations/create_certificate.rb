@@ -14,7 +14,7 @@ module Mutations
     type Types::CertificateType
 
     def resolve(attributes:)
-      Certificate::Creator.new(current_user: current_user, attributes: attributes.to_h).call
+      Certificates::Creator.new(current_user: current_user, attributes: attributes.to_h).call
     end
   end
 end
