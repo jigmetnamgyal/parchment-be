@@ -18,7 +18,6 @@ module Certificates
         lowquality: false,
         image_quality: 500,
         viewport_size: '1280x1024',
-        margin: { right: 10, left: 10, top: 19, bottom: 30 },
         encoding: 'utf-8'
       }
     end
