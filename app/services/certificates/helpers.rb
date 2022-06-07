@@ -12,7 +12,7 @@ module Certificates
 
     def options
       {
-        orientation: 'Portrait',
+        orientation: 'Landscape',
         page_size: 'A4',
         dpi: 96,
         lowquality: false,
