@@ -21,7 +21,7 @@
 
     <div>
       <% if certificate.qr_code_url.present? %>
-        <%= image_tag("http://localhost:3000/#{certificate.qr_code_url}", style: "margin-left: 750px; margin-top: -1000px; height: 200px; width: 200px;") %>
+        <%= image_tag("https://young-hollows-48335.herokuapp.com#{certificate.qr_code_url}", style: "margin-left: 750px; margin-top: -1000px; height: 200px; width: 200px;") %>
         <p style="margin-left: 750px; margin-top: -40px;">Scan to view your NFT certificate</p>
       <% end %>
     </div>

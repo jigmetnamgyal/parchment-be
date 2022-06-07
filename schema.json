@@ -543,7 +543,7 @@
           "inputFields": [
             {
               "name": "qrCodeUrl",
-              "description": null,
+              "description": "Send the open sea url",
               "type": {
                 "kind": "NON_NULL",
                 "name": null,

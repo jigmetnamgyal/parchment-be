@@ -77,6 +77,10 @@ type GenerateCertificatePdfPayload {
 
 input GenerateCertificateWithQrAttributes {
   certificateId: String!
+
+  """
+  Send the open sea url
+  """
   qrCodeUrl: String!
 }
 
