@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= wicked_pdf_stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "pdf" %>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 
-<body id="pdf-template"><%= yield %></body>
+<body
+  id="placeholder"
+  style="
+  background-image: url('https://i.pinimg.com/originals/47/25/09/47250926243496ecefefee4f91ff8456.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: -25px;
+  height: 950px;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  "
+>
+  <%= yield %>
+</body>
 
 </html>

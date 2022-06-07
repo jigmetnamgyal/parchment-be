@@ -14,7 +14,7 @@ module Certificates
       end
 
       create_png(rails_blob_path(certificate_object.certificate_pdf_download, only_path: true))
-      upload_image!(certificate_object)
+      upload_image!(certificate_object.certificate_png)
     end
 
     private

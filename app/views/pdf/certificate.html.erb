@@ -1,21 +1,23 @@
-<div>
+<div >
   <div>
-    <%= image_tag(certificate.institution_logo_url) %>
+    <%= image_tag(certificate.institution_logo_url, style: "height: 160px; width: 160px; margin-left: 570px; margin-top: 70px") %>
   </div>
-  <div>
-    <p><%= certificate.institution_name %></p>
-    <p><%= certificate.description %></p>
-    <p><%= certificate.major %></p>
-    <p>to</p>
-    <p><%= certificate.awarded_to %></p>
-    <p>who has satisfied the Examiners in the Final examinations for the degree with distinction </p>
+  <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <p style="line-height: 32px; font-weight: bold; font-size: 35px;"><%= certificate.institution_name %></p>
+    <p style="margin: -10px auto; width: 80%; font-family: 'Cookie', cursive; font-weight: 100 !important; font-size: 30px;"><%= certificate.description %></p>
+    <p style="margin-bottom: -10px; font-size: 30px; font-weight: bold;"><%= certificate.major %></p>
+    <p style="font-size: 25px;">to</p>
+    <p style="margin-top: -10px; font-size: 30px; font-weight: bold;"><%= certificate.awarded_to %></p>
+    <p style="font-size: 20px;">who has satisfied the Examiners in the Final examinations for the degree with distinction </p>
   </div>
 
   <div>
-    <p><%= Date.current %></p>
-    <div>
-      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg") %>
-      <p>Registrar and Secretary</p>
+    <div style="width: 80%; margin: 0 auto;">
+      <div>
+        <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg", style: "margin-left: 60px; margin-top: 30px; height: 100px; width: 100px") %>
+        <p style="margin-left: 50px;"><%= Date.current %></p>
+        <p style="margin-left: 50px;">Registrar and Secretary</p>
+      </div>
     </div>
 
     <div>
