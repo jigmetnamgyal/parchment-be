@@ -1,4 +1,4 @@
-<div >
+<div>
   <div>
     <%= image_tag(certificate.institution_logo_url, style: "height: 160px; width: 160px; margin-left: 570px; margin-top: 70px") %>
   </div>
@@ -8,22 +8,21 @@
     <p style="margin-bottom: -10px; font-size: 30px; font-weight: bold;"><%= certificate.major %></p>
     <p style="font-size: 25px;">to</p>
     <p style="margin-top: -10px; font-size: 30px; font-weight: bold;"><%= certificate.awarded_to %></p>
-    <p style="font-size: 20px;">who has satisfied the Examiners in the Final examinations for the degree with distinction </p>
+    <p style="font-size: 20px;">who has satisfied the Examiners in the Final examinations for the degree with
+      distinction </p>
   </div>
 
-  <div>
-    <div style="width: 80%; margin: 0 auto;">
-      <div>
-        <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg", style: "margin-left: 60px; margin-top: 30px; height: 100px; width: 100px") %>
-        <p style="margin-left: 50px;"><%= Date.current %></p>
-        <p style="margin-left: 50px;">Registrar and Secretary</p>
-      </div>
+  <div style="margin: 0 auto; width: 80%;">
+    <div>
+      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg", style: "margin-left: 65px; margin-top: 30px; height: 100px; width: 100px") %>
+      <p style="margin-left: 55px;"><%= Date.current %></p>
+      <p style="margin-left: 55px;">Registrar and Secretary</p>
     </div>
 
     <div>
       <% if certificate.qr_code_url.present? %>
-        <%= image_tag(certificate.qr_code_url) %>
-        <p>Scan to view your NFT certificate</p>
+        <%= image_tag("http://localhost:3000/#{certificate.qr_code_url}", style: "margin-left: 750px; margin-top: -1000px; height: 200px; width: 200px;") %>
+        <p style="margin-left: 750px; margin-top: -40px;">Scan to view your NFT certificate</p>
       <% end %>
     </div>
   </div>

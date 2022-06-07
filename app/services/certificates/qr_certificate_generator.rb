@@ -6,7 +6,7 @@ module Certificates
       generate_qr
 
       certificate_object.certificate_with_qr_download.attach(
-        io: StringIO.new(PdfGeneratorHelper.new(id: attributes['certificate_id']).generate),
+        io: StringIO.new(PdfGeneratorHelper.new(id: attributes[:certificate_id]).generate),
         filename: "certificate_with_qr(#{Time.current.strftime('%d/%m/%Y %H:%M:%S')}).pdf",
         content_type: 'application/pdf'
       ).then do |attached|
@@ -39,7 +39,7 @@ module Certificates
       IO.binwrite('opensea_qr.png', png.to_s)
 
       certificate_object.update!(
-        qr_code_link: update_qr_code_link(certificate_object.opensea_qr)
+        qr_code_url: update_qr_code_link(certificate_object.opensea_qr)
       )
     end
 
