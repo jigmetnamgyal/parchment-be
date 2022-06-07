@@ -20,8 +20,7 @@ module Certificates
     private
 
     def certificate_object
-      # current_user.certificates.find(certificate_id)
-      Certificate.find(certificate_id)
+      current_user.certificates.find(certificate_id)
     end
 
     def create_png(pdf)
