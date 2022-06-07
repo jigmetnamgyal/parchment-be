@@ -11,7 +11,9 @@ module Mutations
     type Types::ProfileType
 
     def resolve(attributes:)
-      Profile.find(attributes.to_h[:id]).update!(kyc_status: attributes.to_h[:kyc_status])
+      Profile.find(attributes.to_h[:id]).tap do |profile|
+        profile.update!(kyc_status: attributes.to_h[:kyc_status])
+      end
     end
   end
 end
