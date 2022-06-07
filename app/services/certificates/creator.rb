@@ -5,13 +5,7 @@ module Certificates
     attr_accessor :file
 
     def call
-      @file = attributes.delete(:institution_logo)
-
-      Certificate.new(certificate_attributes(attributes)).tap do |certificate|
-        certificate.institution_logo.attach(blob)
-        certificate.institution_logo_url = rails_blob_path(certificate.institution_logo, only_path: true)
-        certificate.save!
-      end
+      Certificate.create!(certificate_attributes(attributes))
     end
 
     private

@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
 
   has_many :certificates, dependent: :destroy
+  has_many :meta_data, dependent: :destroy
 end

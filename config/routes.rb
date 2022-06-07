@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post '/users', defaults: { format: :json }, to: 'registration#create'
   delete '/users', defaults: { format: :json }, to: 'logout#destroy'
   post '/users/sign_in', defaults: { format: :json }, to: 'login#login'
+
+  get '/patients/:id', to: 'meta_data#show'
 end
