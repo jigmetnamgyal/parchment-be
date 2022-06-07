@@ -17,7 +17,7 @@ module Certificates
     private
 
     def certificate_object
-      current_user.certificates.find(certificate_id)
+      current_user.certificates.find(attributes[:certificate_id])c
     end
 
     def generate_qr
