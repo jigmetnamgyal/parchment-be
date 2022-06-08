@@ -1,31 +1,36 @@
-<div>
-  <div>
-    <%= image_tag("https://cert-tainty.vercel.app/assets/hacket-small.png") %>
-    <p>Build For Change</p>
+<div >
+  <div >
+  <p style="margin-top: 10%;">&nbsp;</p>  
+  <div style="float: right;">
+<%= image_tag("https://cert-tainty.vercel.app/assets/hacket-small.png", size:"100") %>
+    
   </div>
-  <div>
-    <p>To Whom it may concern</p>
-    <p><%= DateTime.now %></p>
+  </div>
+  <div class="recommendation-header" style="margin-top: 10%;">
+    <span style="margin-top: 10%; margin-left: 10%; margin-right: 20%;">To Whom it may concern</span>
+    <span><%= DateTime.now %></span>
   </div>
 
-  <div>
+  <div class="recommendation-subject" style="padding:10% 25% 2% 25%;
+    
+    text-decoration: underline;
+    font-size: 30px;">
     <p>Letter Of Recommendation</p>
   </div>
 
-  <div>
+  <div class="recommendation-message" style="">
     <p><%= recommendation.message %></p>
   </div>
 
   <div>
-    <div>
+    <div style="margin-top:10%;">
       <p>Sincerely</p>
-      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg") %>
+      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/a/ad/Wonho-Signature.svg", size:"150") %>
+       <div style="float: right;">
+      <%= image_tag("https://i.ibb.co/553Nm2s/letter.png", size:"200") %>
+    </div>
       <p><%= DateTime.current %></p>
       <p>Registrar and Secretary</p>
-    </div>
-
-    <div>
-      <%= image_tag("https://i.ibb.co/553Nm2s/letter.png") %>
     </div>
   </div>
 </div>
