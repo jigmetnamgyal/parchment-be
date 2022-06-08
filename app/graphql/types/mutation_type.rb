@@ -8,5 +8,7 @@ module Types
     field :update_kyc_status, mutation: Mutations::UpdateKycStatus
     field :generate_certificate_with_qr, mutation: Mutations::GenerateCertificateWithQr
     field :create_meta_data, mutation: Mutations::CreateMetaData
+    field :create_recommendation_letter, mutation: Mutations::CreateRecommendationLetter
+    field :download_letter, mutation: Mutations::DownloadLetter
   end
 end
